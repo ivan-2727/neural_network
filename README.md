@@ -2,7 +2,7 @@
 
 
 This is my first project in machine learning, a neural network for recognition of handwritten digits and characters.
-The code was written without special libraries, and Python was used only to generate the training data from png files. Source of training samples: https://github.com/sueiras/handwritting_characters_database
+The code was written without special libraries, and Python was used only to generate the training data from png files. Source of training and testing samples: https://github.com/sueiras/handwritting_characters_database
 The network is organized into a binary tree structure, where a each node is a subnetwork making a binary choice. For example, the root subnetwork answers the question "does the digit belong to subset (0,1,2,3,4) or (5,6,7,8,9)", then one of it's children can deal with (0,1) vs (2,3,4) and so on, until a single digit remains. Within a node, the subnetwork is optimized via the usual backpropagation with gradient descent with a constant learning rate. 
 To run the default verstion, compile and execute `tree_of_networks.cpp`. 
 Current results, each achieved within one hour of training, are given in the table. 
